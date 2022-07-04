@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   display: block;
   background-color: black;
@@ -6,7 +12,9 @@ body {
 main {
   display: flex;
   margin: auto;
-  width: 900px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #form-image {
@@ -14,7 +22,12 @@ main {
 }
 
 form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: white;
+  width: 60%;
 }
 fieldset {
   border: none;
@@ -23,4 +36,33 @@ fieldset {
   display: flex;
   flex-direction: column;
 }
+
+form div:first-of-type {
+  padding-right: 12rem;
+  padding-left: 2.5rem;
+  font-size: 1.5rem;
+}
+
+form div:first-of-type p {
+  margin: 25px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1201px) {
+  main {
+    width: 1440px;
+    height: 100vh;
+  }
+}
+
 
