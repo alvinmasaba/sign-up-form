@@ -9,7 +9,9 @@
 </head>
 <body>
   <main>
-    <img src="./images/photo-1585202900225-6d3ac20a6962.avif" alt="Image of tropical leaves" id="form-image">
+    <div class="logo-container">
+      <img src="./images/odin-lined.png" alt="Odin Project Logo">
+    </div>
     <form action="POST">
       <div class="form-header-text">
         <p>This is not a real online service! You know you need something like this in
@@ -32,7 +34,7 @@
         </fieldset>
         <fieldset class="form-row">
           <label for="user_phone">Phone Number</label>
-          <input type="text" id="user_phone" name="phone">
+          <input type="text" id="user_phone" name="phone" pattern="((\+|00)?[1-9]{2}|0)[1-9]([0-9]){8}">
         </fieldset>
         <fieldset class="form-row">
           <label for="user_password">Password</label>

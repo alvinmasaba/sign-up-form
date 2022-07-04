@@ -7,18 +7,31 @@
 body {
   display: block;
   background-color: black;
+  height: 1024px;
 }
 
 main {
   display: flex;
+  flex-direction: column;
+  background-image: url('../images/photo-1585202900225-6d3ac20a6962.avif');
+  background-size: 48%;
+  background-repeat: repeat-x;
   margin: auto;
-  width: 100vw;
-  height: 100vh;
+  width: 1440px;
+  height: 100%;
+  min-width: 1000px;
+  min-height: 800px;
   overflow: hidden;
+  position: relative;
 }
 
-#form-image {
-  width: 40%;
+.logo-container {
+  position: absolute;
+}
+
+.logo-container > img {
+  height: 50%;
+  width: 50%;
 }
 
 form {
@@ -28,6 +41,8 @@ form {
   justify-content: center;
   background-color: rgb(247, 247, 247);
   width: 60%;
+  height: 100%;
+  align-self: flex-end;
 }
 fieldset {
   border: none;
@@ -76,26 +91,45 @@ form div:first-of-type p {
   display: flex;
   flex-direction: column;
   width: 50%;
+  font-size: 14px;
   text-transform: uppercase;
   margin-top: 0.5rem;
 }
 
 .form-row input {
   width: 75%;
-  line-height: 1.5rem;
-  border: 1px solid rgba(151, 151, 151, 0.733);
-  border-radius: 2.5%;
+  line-height: 1.9rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 5px;
+  padding-left: 1rem;
+  box-shadow: 1px 1px 1px 0px lightgray;
+}
+
+.form-row input:focus-visible, input:focus {
+  outline-color: blue;
+}
+
+.form-row input:valid {
+  outline-color: #596D48;
+}
+
+.form-row input:invalid {
+  outline-color: red;
 }
 
 button {
   padding: 1rem 1rem 1rem 1rem;
-  background-color: rgb(36, 128, 0);
-  font-size: 1.5rem;
+  background-color: #596D48;
+  font-size: 18px;
   color: white;
-  border-radius: 2.5%;
-  box-shadow: none;
+  border-radius: 10px;
   align-self: flex-start;
   margin-left: 2.5rem;
+  width: 15rem;
+  line-height: 1.2rem;
+  text-align: center;
+  border: none;
+  box-shadow: 1.5px 3px 5px 0px lightgray;
 }
 
 .form-footer {
@@ -108,25 +142,7 @@ button {
 
 .form-footer > a {
   margin-left: 0.25rem;
+  text-decoration: none;
+  color: #596D48;
+  font-size: 18px;
 }
-/* Mobile Styles */
-@media only screen and (max-width: 400px) {
-  
-}
-
-/* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-  
-}
-
-/* Desktop Styles */
-@media only screen and (min-width: 1201px) {
-  main {
-    width: 1440px;
-    height: 100vh;
-    min-width: 1000px;
-    min-height: 800px;
-  }
-}
-
-
