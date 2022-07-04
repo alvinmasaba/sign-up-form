@@ -1,3 +1,24 @@
+body {
+  display: block;
+  background-color: black;
+}
+
+main {
+  display: flex;
+  margin: auto;
+  width: 900px;
+}
+
+#form-image {
+  width: 40%;
+}
+
+form {
+  background-color: white;
+}
+fieldset {
+  border: none;
+}
 .form-row label, input {
   display: flex;
   flex-direction: column;
