@@ -1,3 +1,8 @@
+@font-face {
+  font-family: logo-font;
+  src: url('../fonts/Norse-Bold.otf');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,8 +19,8 @@ main {
   display: flex;
   flex-direction: column;
   background-image: url('../images/photo-1585202900225-6d3ac20a6962.avif');
-  background-size: 48%;
-  background-repeat: repeat-x;
+  background-size: 47%;
+  background-position-x: -10%;
   margin: auto;
   width: 1440px;
   height: 100%;
@@ -26,12 +31,24 @@ main {
 }
 
 .logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.459);
+  font-family: logo-font, sans-serif;
+  font-size: 6rem;
+  color: white;
+  height: 15%;
+  width: 37%;
+  top: 22%;
+  z-index: 1;
 }
 
 .logo-container > img {
-  height: 50%;
-  width: 50%;
+  height: 85%;
+  width: auto;
 }
 
 form {
@@ -40,9 +57,10 @@ form {
   align-items: center;
   justify-content: center;
   background-color: rgb(247, 247, 247);
-  width: 60%;
+  width: 63%;
   height: 100%;
   align-self: flex-end;
+  z-index: 2;
 }
 fieldset {
   border: none;
@@ -55,7 +73,7 @@ form div:first-of-type {
 form div:first-of-type p {
   margin: 25px;
   margin-left: 0;
-  padding-right: 11rem;
+  padding-right: 14rem;
   padding-left: 2.5rem;
 }
 
@@ -113,7 +131,7 @@ form div:first-of-type p {
   outline-color: #596D48;
 }
 
-.form-row input:invalid {
+.form-row input[type="password"]:invalid {
   outline-color: red;
 }
 
