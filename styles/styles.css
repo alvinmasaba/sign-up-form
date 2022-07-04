@@ -26,27 +26,89 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: rgb(247, 247, 247);
   width: 60%;
 }
 fieldset {
   border: none;
 }
-.form-row label, input {
-  display: flex;
-  flex-direction: column;
-}
 
 form div:first-of-type {
-  padding-right: 12rem;
-  padding-left: 2.5rem;
   font-size: 1.5rem;
 }
 
 form div:first-of-type p {
   margin: 25px;
+  margin-left: 0;
+  padding-right: 11rem;
+  padding-left: 2.5rem;
 }
 
+.form-header-text {
+  padding-bottom: 4rem;
+  font-weight: 200;
+}
+
+.form-header-text > p > span {
+  font-style: italic;
+}
+
+.form-input-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 35%;
+  width: 100%;
+  background-color: white;
+  padding-right: 11rem;
+  padding-left: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  box-shadow: 0px 2.5px 5px 0px lightgray;
+  margin-bottom: 2rem;
+}
+
+.form-input-container > p {
+  width: 100%;
+  font-size: 2rem;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+.form-row input {
+  width: 75%;
+  line-height: 1.5rem;
+  border: 1px solid rgba(151, 151, 151, 0.733);
+  border-radius: 2.5%;
+}
+
+button {
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: rgb(36, 128, 0);
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 2.5%;
+  box-shadow: none;
+  align-self: flex-start;
+  margin-left: 2.5rem;
+}
+
+.form-footer {
+  display: flex;
+  margin-top: 2rem;
+  width: 100%;
+  align-self: flex-start;
+  padding-left: 2.5rem;
+}
+
+.form-footer > a {
+  margin-left: 0.25rem;
+}
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
   
@@ -62,6 +124,8 @@ form div:first-of-type p {
   main {
     width: 1440px;
     height: 100vh;
+    min-width: 1000px;
+    min-height: 800px;
   }
 }
 
