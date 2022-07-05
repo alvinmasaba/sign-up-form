@@ -26,8 +26,8 @@ main {
   margin: auto;
   width: var(--width);
   height: var(--height);
-  min-width: 1000px;
-  min-height: 800px;
+  min-width: calc(var(--width) * 0.5);
+  min-height: calc(var(--height) * 0.5);
   overflow: hidden;
   position: relative;
 }
@@ -75,13 +75,15 @@ form div:first-of-type {
 form div:first-of-type p {
   margin: 25px;
   margin-left: 0;
-  padding-right: 14rem;
-  padding-left: 2.5rem;
+  padding-right: 10%;
+  padding-left: 5%;
 }
 
 .form-header-text {
-  padding-bottom: 4rem;
-  font-weight: 200;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  font-weight: 600;
 }
 
 .form-header-text > p > span {
@@ -95,8 +97,8 @@ form div:first-of-type p {
   height: 35%;
   width: 100%;
   background-color: white;
-  padding-right: 11rem;
-  padding-left: 2.5rem;
+  padding-right: 15%;
+  padding-left: 5%;
   padding-top: 1rem;
   padding-bottom: 1.5rem;
   box-shadow: 0px 2.5px 5px 0px lightgray;
@@ -109,6 +111,7 @@ form div:first-of-type p {
 }
 .form-row {
   display: flex;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   flex-direction: column;
   width: 50%;
   font-size: 14px;
@@ -125,9 +128,15 @@ form div:first-of-type p {
   box-shadow: 1px 1px 1px 0px lightgray;
 }
 
+.form-row label {
+  font-size: 12px;
+  font-weight: 550;
+  color: rgb(27, 27, 27);
+  margin-bottom: 2%;
+}
 .form-row input:focus-visible, input:focus {
   outline: auto;
-  outline-color: blue;
+  outline-color: rgba(0, 0, 255, 0.527);
 }
 
 .form-row input:valid {
@@ -147,7 +156,7 @@ button {
   color: white;
   border-radius: 10px;
   align-self: flex-start;
-  margin-left: 2.5rem;
+  margin-left: 5%;
   width: 15rem;
   line-height: 1.2rem;
   text-align: center;
@@ -160,7 +169,7 @@ button {
   margin-top: 2rem;
   width: 100%;
   align-self: flex-start;
-  padding-left: 2.5rem;
+  padding-left: 5%;
 }
 
 .form-footer > a {
