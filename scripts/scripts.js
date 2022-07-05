@@ -8,10 +8,14 @@ const submitButton = document.querySelector('.submit-button');
 const form = document.querySelector('.form');
 
 function validateForm() {
-  let first_password = document.querySelector('#user_password').value;
-  let second_password = document.querySelector('#confirm_user_password').value;
+  let input_password = document.querySelector('#user_password');
+  let confirm_password = document.querySelector('#confirm_user_password');
 
-  if (first_password != second_password) {
+  if (input_password.value != confirm_password.value) {
+    // Sets outline color of input fields to red.
+    input_password.setAttribute("style", "outline-color: rgb(199, 2, 2);");
+    confirm_password.setAttribute("style", "outline-color: rgb(199, 2, 2);");
+
     // If the passwords do not match, disables submit button.
     submitButton.disabled = true;
 
@@ -31,6 +35,10 @@ function validateForm() {
       errorMessage = document.querySelector('.error-message')
       passwordContainer.removeChild(errorMessage);
     };
+
+    // Sets outline color of input fields to green.
+    input_password.setAttribute("style", "outline-color: #596D48;");
+    confirm_password.setAttribute("style", "outline-color: #596D48;");
 
     // Enables the submit button.
     submitButton.disabled = false;
