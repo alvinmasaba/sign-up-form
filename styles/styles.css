@@ -132,7 +132,7 @@ form div:first-of-type p {
 }
 
 .form-row input[type="password"]:invalid {
-  outline-color: red;
+  outline-color: rgb(199, 2, 2);
 }
 
 button {
@@ -163,4 +163,14 @@ button {
   text-decoration: none;
   color: #596D48;
   font-size: 18px;
+}
+
+#password-input {
+  position: relative;
+}
+.error-message {
+  position: absolute;
+  top: 3.5rem;
+  text-transform: none;
+  color: rgb(199, 2, 2);
 }

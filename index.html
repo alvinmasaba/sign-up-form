@@ -13,7 +13,7 @@
       <img src="./images/odin-lined.png" alt="Odin Project Logo">
       <p>ODIN</p>
     </div>
-    <form action="POST">
+    <form class="form" action="POST">
       <div class="form-header-text">
         <p>This is not a real online service! You know you need something like this in
           your life to help you realize your deepest dreams. Sign up <span>now</span> to get started.</p>
@@ -37,21 +37,22 @@
           <label for="user_phone">Phone Number</label>
           <input type="text" id="user_phone" name="phone" pattern="((\+|00)?[1-9]{2}|0)[1-9]([0-9]){8}">
         </fieldset>
-        <fieldset class="form-row">
+        <fieldset class="form-row" id="password-input">
           <label for="user_password">Password</label>
-          <input type="password" id="user_password" name="password" required>
+          <input type="password" id="user_password" name="password" onkeyup="validateForm()" required>
         </fieldset>
         <fieldset class="form-row">
           <label for="confirm_user_password">Confirm Password</label>
-          <input type="password" id="confirm_user_password" name="confirm_password" required>
+          <input type="password" id="confirm_user_password" name="confirm_password" onkeyup="validateForm()" required>
         </fieldset>
       </div>
-      <button type="submit">Create Account</button>
+      <button class="submit-button" type="submit">Create Account</button>
       <div class="form-footer">
         <p>Already have an account?</p>
         <a href="">Log in</a>
       </div>
     </form>
   </main>
+<script src="./scripts/scripts.js"></script>
 </body>
 </html>
