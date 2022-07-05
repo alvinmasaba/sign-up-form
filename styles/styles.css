@@ -12,18 +12,20 @@
 body {
   display: block;
   background-color: black;
-  height: 1024px;
 }
 
 main {
+  --height: 1024px;
+  --width: 1440px;
+
   display: flex;
   flex-direction: column;
   background-image: url('../images/photo-1585202900225-6d3ac20a6962.avif');
-  background-size: 47%;
+  background-size: 48%;
   background-position-x: -10%;
   margin: auto;
-  width: 1440px;
-  height: 100%;
+  width: var(--width);
+  height: var(--height);
   min-width: 1000px;
   min-height: 800px;
   overflow: hidden;
@@ -124,14 +126,17 @@ form div:first-of-type p {
 }
 
 .form-row input:focus-visible, input:focus {
+  outline: auto;
   outline-color: blue;
 }
 
 .form-row input:valid {
+  outline: auto;
   outline-color: #596D48;
 }
 
-.form-row input[type="password"]:invalid {
+.form-row input[type="password"] {
+  outline: auto;
   outline-color: rgb(199, 2, 2);
 }
 

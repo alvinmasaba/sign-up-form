@@ -36,10 +36,11 @@ function validateForm() {
       passwordContainer.removeChild(errorMessage);
     };
 
-    // Sets outline color of input fields to green.
-    input_password.setAttribute("style", "outline-color: #596D48;");
-    confirm_password.setAttribute("style", "outline-color: #596D48;");
-
+    // Sets outline color of input fields to green if matching passwords are of correct length.
+    if (input_password.value.length >= 8) {
+      input_password.setAttribute("style", "outline-color: #596D48;");
+      confirm_password.setAttribute("style", "outline-color: #596D48;");
+    };
     // Enables the submit button.
     submitButton.disabled = false;
   };
